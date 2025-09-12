@@ -1,8 +1,13 @@
+"use client";
+
 import * as _ from './style';
+import { useRouter } from 'next/navigation';
 
 export default function Landing() {
+  const router = useRouter();
+
   return (
-    <_.Container>
+    <_.Container onClick={() => router.push('/main')}>
       <_.Group>
         <_.Box />
         <_.TextGroup>

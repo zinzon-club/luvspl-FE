@@ -14,6 +14,7 @@ export const Container = styled.div`
   max-width: 400px;
   height: 100vh;
   row-gap: 10rem;
+  cursor: pointer;
 `;
 
 export const Group = styled.div`
