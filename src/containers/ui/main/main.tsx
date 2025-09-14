@@ -11,7 +11,7 @@ export default function Main() {
       <_.Wrapper>
         <Image src="assets/arrow.svg" alt="arrow" width={24} height={24} style={{cursor:"pointer"}} />
         <_.Group>
-          <Image src="/assets/gif/know.gif" alt="know" width={210} height={210} />
+          <Image src="/assets/gif/know.gif" alt="know" width={210} height={210} style={{ filter: "drop-shadow(0 0.2rem 0.75rem rgba(86, 115, 78, 0.494))" }}/>
           <_.Inner>
           <_.TextGroup>
             <_.Title>알아가기</_.Title>

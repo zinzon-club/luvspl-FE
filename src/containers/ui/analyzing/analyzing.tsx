@@ -17,7 +17,7 @@ export default function Analyzing() {
     return (
         <_.Container>
             <_.Wrapper>
-                <Image src="/assets/gif/record.gif" alt="record" width={250} height={250} />
+                <Image src="/assets/gif/record.gif" alt="record" width={250} height={250} style={{borderRadius: "4px"}} />
                 <_.TextGroup>
                     <_.Title>분석 중</_.Title>
                     <_.SubTitle>평소 사용하는 언어를 확인하고 있어요</_.SubTitle>
