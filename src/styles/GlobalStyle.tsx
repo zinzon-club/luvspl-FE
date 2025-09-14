@@ -10,18 +10,18 @@ const GlobalStyle = () => (
         padding: 0;
         box-sizing: border-box;
       }
-
       @font-face {
-          font-family: 'MiraeroNormal';
-          src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/MiraeroNormal.woff') format('woff');
-          font-weight: normal;
-          font-style: normal;
+        font-family: 'GangwonEducationSaeum';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff') format('woff');
+        font-weight: normal;
+        font-display: swap;
       }
 
       html,
       body,
       * {
-        font-family: "GangwonEducationSaeum", sans-serif;
+        font-family: 'GangwonEducationSaeum';
+        color: #484B48;
       }
 
       #nprogress .bar {

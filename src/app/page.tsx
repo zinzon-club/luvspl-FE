@@ -1,8 +1,9 @@
-"use client";
+"use client"
 
-export default function Home() {
-  return (
-    <div>
-    </div>
-  );
+import Landing from "@/containers/ui/landing";
+
+export default function LandingPage(){
+    return (
+        <Landing />
+    );
 }
