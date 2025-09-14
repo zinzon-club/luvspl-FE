@@ -1,6 +1,6 @@
 "use client"
 
-import Analyzing from "@/containers/ui/analyzing/analyzing";
+import Analyzing from "@/containers/ui/analyzing";
 
 export default function AnalyzingPage(){
     return (

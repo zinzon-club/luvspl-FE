@@ -1,6 +1,6 @@
 "use client"
 
-import Landing from "@/containers/ui/landing/landing";
+import Landing from "@/containers/ui/landing";
 
 export default function LandingPage(){
     return (
