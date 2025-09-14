@@ -1,8 +1,11 @@
 import * as _ from './sytle';
 import Btn from '@/components/button/button';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function Main() {
+  const router = useRouter();
+
   return (
     <_.Container>
       <_.Wrapper>
@@ -19,7 +22,7 @@ export default function Main() {
         </_.Group>
         <Image src="assets/arrow.svg" alt="arrow" width={24} height={24}  style={{transform:"rotate(180deg)", cursor:"pointer"}} />
       </_.Wrapper>
-      <Btn>데이터 삽입</Btn>
+      <Btn onClick={() => router.push('/analyzing')}>데이터 삽입</Btn>
     </_.Container>
   );
 }
