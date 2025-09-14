@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { ABeePudding } from "@/styles/Font";
 
-export const Basic = `
+const Basic = `
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +25,11 @@ export const Wrapper = styled.div`
 
 export const Group = styled.div`
   ${Basic}
-  row-gap: 2rem;
+`;
+
+export const Inner = styled.div`
+  ${Basic}
+  row-gap: 3rem;
 `;
 
 export const Box = styled.div`
@@ -38,7 +42,7 @@ export const TextGroup = styled.div`
   ${Basic}
   width: 100%;
   text-align: center;
-  row-gap: 1.25rem;
+  row-gap: 1.5rem;
 `;
 
 export const Title = styled.div`

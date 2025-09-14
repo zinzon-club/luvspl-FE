@@ -2,6 +2,7 @@
 
 import * as _ from './style';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function Landing() {
   const router = useRouter();
@@ -9,7 +10,7 @@ export default function Landing() {
   return (
     <_.Container onClick={() => router.push('/main')}>
       <_.Group>
-        <_.Box />
+        <Image src="/assets/gif/cup.gif" alt="cup" width={160} height={160} style={{ transform: "rotate(-8deg)" }} />
         <_.TextGroup>
           <_.SubTitle>가장 좋아하는 나에게 주는 선물</_.SubTitle>
           <_.Title>사랑의 주문</_.Title>
