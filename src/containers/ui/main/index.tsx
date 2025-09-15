@@ -20,7 +20,7 @@ export default function Main() {
           <_.Guide>데이터 저장 방법 <br /> 채팅 {'>'} 설정 {'>'} 대화 내용 내보내기 {'>'} <br /> {'>'} 텍스트만 내보내기</_.Guide>
           </_.Inner>
         </_.Group>
-        <Image src="assets/arrow.svg" alt="arrow" width={24} height={24}  style={{transform:"rotate(180deg)", cursor:"pointer"}} />
+        <Image src="assets/arrow.svg" alt="arrow" width={24} height={24}  style={{transform:"rotate(180deg)", cursor:"pointer"}} onClick={() => router.push('/mypage')}/>
       </_.Wrapper>
       <Btn onClick={() => router.push('/analyzing')}>데이터 삽입</Btn>
     </_.Container>
