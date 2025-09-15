@@ -1,5 +1,5 @@
 import * as _ from "./style";
-import info from "./data";
+import { info, settingGroup } from "./data";
 import Image from "next/image";
 import { useState } from "react";
 import Off from "@/../public/assets/toggle/toggleOff.svg";
@@ -7,30 +7,7 @@ import On from "@/../public/assets/toggle/toggleOn.svg";
 
 const Mypage = () => {
   const [toggle, setToggle] = useState(false);
-  const settingGroup = [
-    {
-      subTitle: "챌린지",
-      item: [
-        {
-          name: "저장된 분석 결과",
-          nav: "/result",
-        },
-        {
-          name: "투두리스트",
-          nav: "/todo",
-        },
-      ],
-    },
-    {
-      subTitle: "설정",
-      item: [
-        {
-          name: "프로필 정보",
-          nav: "/info",
-        },
-      ],
-    },
-  ];
+
   return (
     <_.Container>
       <_.InfoContainer>
@@ -57,7 +34,7 @@ const Mypage = () => {
                       width={30}
                       height={30}
                     />
-                    <_.DecoText>item.name</_.DecoText>
+                    <_.DecoText>{item.name}</_.DecoText>
                   </_.DecoSet>
                   <_.DecoSpan>{">"}</_.DecoSpan>
                 </_.SubItem>
