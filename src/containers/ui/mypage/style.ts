@@ -1,0 +1,73 @@
+import styled from "@emotion/styled";
+import { ABeePudding } from "@/styles/Font";
+import { color } from "@/styles/theme";
+
+const Basic = `
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Container = styled.div`
+  ${Basic};
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  flex-direction: column;
+  gap: 2rem;
+`;
+export const InfoContainer = styled.div`
+  ${Basic};
+  width: 100%;
+  gap: 0.5rem;
+  flex-direction: column;
+`;
+export const UserName = styled.div`
+  font-size: 2.25rem;
+  text-align: center;
+  color: ${color.black};
+`;
+export const SettingContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.75rem;
+`;
+export const SettingInfoContainer = styled.div`
+  width: 100%;
+  padding: 1rem 0.75rem;
+  border-radius: 1.5rem;
+  background-color: rgba(229, 239, 218, 0.5);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0.75rem;
+`;
+export const SubTitle = styled.div`
+  font-size: 1.5rem;
+  color: ${color.gray700};
+  padding: 0 0.25rem;
+`;
+export const SubContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+export const SubItem = styled.div`
+  display: flex;
+  gap: 0.5rem;
+`;
+export const DecoSet = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+`;
+export const DecoText = styled.div`
+  width: 100%;
+  font-size: 1.25rem;
+  color: ${color.gray600};
+`;
+export const DecoSpan = styled.div`
+  font-size: 1.25rem;
+  color: ${color.gray600};
+  padding: 0 0.5rem;
+`;

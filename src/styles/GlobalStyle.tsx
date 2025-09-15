@@ -19,7 +19,6 @@ const GlobalStyle = () => (
         font-weight: normal;
         font-display: swap;
       }
-
       html,
       body,
       * {
