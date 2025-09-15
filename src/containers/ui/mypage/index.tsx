@@ -7,6 +7,30 @@ import On from "@/../public/assets/toggle/toggleOn.svg";
 
 const Mypage = () => {
   const [toggle, setToggle] = useState(false);
+  const settingGroup = [
+    {
+      subTitle: "챌린지",
+      item: [
+        {
+          name: "저장된 분석 결과",
+          nav: "/result",
+        },
+        {
+          name: "투두리스트",
+          nav: "/todo",
+        },
+      ],
+    },
+    {
+      subTitle: "설정",
+      item: [
+        {
+          name: "프로필 정보",
+          nav: "/info",
+        },
+      ],
+    },
+  ];
   return (
     <_.Container>
       <_.InfoContainer>
@@ -20,70 +44,46 @@ const Mypage = () => {
         <_.UserName>{info.name}</_.UserName>
       </_.InfoContainer>
       <_.SettingContainer>
-        <_.SettingInfoContainer>
-          <_.SubTitle>챌린지</_.SubTitle>
-          <_.SubContainer>
-            <_.SubItem>
-              <_.DecoSet>
-                <Image
-                  src="/assets/band.svg"
-                  alt="band"
-                  width={30}
-                  height={30}
-                />
-                <_.DecoText>저장된 분석 결과</_.DecoText>
-              </_.DecoSet>
-              <_.DecoSpan>{">"}</_.DecoSpan>
-            </_.SubItem>
-            <_.SubItem>
-              <_.DecoSet>
-                <Image
-                  src="/assets/band.svg"
-                  alt="band"
-                  width={30}
-                  height={30}
-                />
-                <_.DecoText>투두리스트</_.DecoText>
-              </_.DecoSet>
-              <_.DecoSpan>{">"}</_.DecoSpan>
-            </_.SubItem>
-          </_.SubContainer>
-        </_.SettingInfoContainer>
-
-        <_.SettingInfoContainer>
-          <_.SubTitle>설정</_.SubTitle>
-          <_.SubContainer>
-            <_.SubItem>
-              <_.DecoSet>
-                <Image
-                  src="/assets/band.svg"
-                  alt="band"
-                  width={30}
-                  height={30}
-                />
-                <_.DecoText>프로필 정보</_.DecoText>
-              </_.DecoSet>
-              <_.DecoSpan>{">"}</_.DecoSpan>
-            </_.SubItem>
-            <_.SubItem>
-              <_.DecoSet>
-                <Image
-                  src="/assets/band.svg"
-                  alt="band"
-                  width={30}
-                  height={30}
-                />
-                <_.DecoText>챗봇 활성화</_.DecoText>
-              </_.DecoSet>
-              <Image
-                src={toggle ? On : Off}
-                alt="on"
-                width={36}
-                onClick={() => setToggle(!toggle)}
-              />
-            </_.SubItem>
-          </_.SubContainer>
-        </_.SettingInfoContainer>
+        {settingGroup.map((item, i) => (
+          <_.SettingInfoContainer key={i}>
+            <_.SubTitle>{item.subTitle}</_.SubTitle>
+            <_.SubContainer>
+              {item.item.map((item, j) => (
+                <_.SubItem key={j}>
+                  <_.DecoSet>
+                    <Image
+                      src="/assets/band.svg"
+                      alt="band"
+                      width={30}
+                      height={30}
+                    />
+                    <_.DecoText>item.name</_.DecoText>
+                  </_.DecoSet>
+                  <_.DecoSpan>{">"}</_.DecoSpan>
+                </_.SubItem>
+              ))}
+              {i == 1 && (
+                <_.SubItem>
+                  <_.DecoSet>
+                    <Image
+                      src="/assets/band.svg"
+                      alt="band"
+                      width={30}
+                      height={30}
+                    />
+                    <_.DecoText>챗봇 활성화</_.DecoText>
+                  </_.DecoSet>
+                  <Image
+                    src={toggle ? On : Off}
+                    alt="on"
+                    width={36}
+                    onClick={() => setToggle(!toggle)}
+                  />
+                </_.SubItem>
+              )}
+            </_.SubContainer>
+          </_.SettingInfoContainer>
+        ))}
       </_.SettingContainer>
     </_.Container>
   );
