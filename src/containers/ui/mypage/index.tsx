@@ -1,9 +1,12 @@
 import * as _ from "./style";
 import info from "./data";
 import Image from "next/image";
-import { DecoSpan } from "./style";
+import { useState } from "react";
+import Off from "@/../public/assets/toggle/toggleOff.svg";
+import On from "@/../public/assets/toggle/toggleOn.svg";
 
 const Mypage = () => {
+  const [toggle, setToggle] = useState(false);
   return (
     <_.Container>
       <_.InfoContainer>
@@ -72,7 +75,12 @@ const Mypage = () => {
                 />
                 <_.DecoText>챗봇 활성화</_.DecoText>
               </_.DecoSet>
-              <_.DecoSpan>{">"}</_.DecoSpan>
+              <Image
+                src={toggle ? On : Off}
+                alt="on"
+                width={36}
+                onClick={() => setToggle(!toggle)}
+              />
             </_.SubItem>
           </_.SubContainer>
         </_.SettingInfoContainer>

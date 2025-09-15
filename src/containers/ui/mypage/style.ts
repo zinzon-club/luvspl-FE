@@ -54,11 +54,13 @@ export const SubContainer = styled.div`
 `;
 export const SubItem = styled.div`
   display: flex;
+  align-items: center;
   gap: 0.5rem;
 `;
 export const DecoSet = styled.div`
   width: 100%;
   display: flex;
+  align-items: center;
   gap: 0.5rem;
 `;
 export const DecoText = styled.div`
