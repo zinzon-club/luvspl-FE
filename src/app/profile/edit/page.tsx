@@ -1,5 +1,7 @@
 "use client";
 
-export default function ProfilePage() {
-  return <div>프로필정보 수정</div>;
+import ProfileEdit from "@/containers/ui/profileEdit";
+
+export default function ProfileEditPage() {
+  return <ProfileEdit />;
 }
