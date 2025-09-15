@@ -26,6 +26,7 @@ export const UserName = styled.div`
   font-size: 2.25rem;
   text-align: center;
   color: ${color.black};
+  cursor: default;
 `;
 export const SettingContainer = styled.div`
   width: 100%;
@@ -47,6 +48,7 @@ export const SubTitle = styled.div`
   font-size: 1.5rem;
   color: ${color.gray700};
   padding: 0 0.25rem;
+  cursor: default;
 `;
 export const SubContainer = styled.div`
   display: flex;
@@ -67,9 +69,11 @@ export const DecoText = styled.div`
   width: 100%;
   font-size: 1.25rem;
   color: ${color.gray600};
+  cursor: default;
 `;
 export const DecoSpan = styled.div`
   font-size: 1.25rem;
   color: ${color.gray600};
   padding: 0 0.5rem;
+  cursor: pointer;
 `;
