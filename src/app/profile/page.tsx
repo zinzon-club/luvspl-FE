@@ -1,5 +1,7 @@
 "use client";
 
+import Profile from "@/containers/ui/profile";
+
 export default function ProfilePage() {
-  return <div>프로필정보</div>;
+  return <Profile />;
 }
