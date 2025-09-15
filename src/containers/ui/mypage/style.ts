@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { ABeePudding } from "@/styles/Font";
 import { color } from "@/styles/theme";
 
 const Basic = `
