@@ -2,6 +2,6 @@
 
 import Result from "@/containers/ui/result";
 
-export default function MainPage() {
+export default function resultPage() {
   return <Result />;
 }

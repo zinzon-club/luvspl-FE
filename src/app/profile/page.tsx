@@ -1,5 +1,5 @@
 "use client";
 
-export default function MainPage() {
+export default function ProfilePage() {
   return <div>프로필정보</div>;
 }

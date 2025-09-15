@@ -4,8 +4,10 @@ import Image from "next/image";
 import { useState } from "react";
 import Off from "@/../public/assets/toggle/toggleOff.svg";
 import On from "@/../public/assets/toggle/toggleOn.svg";
+import { useRouter } from "next/navigation";
 
 const Mypage = () => {
+  const router = useRouter();
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -36,7 +38,9 @@ const Mypage = () => {
                     />
                     <_.DecoText>{item.name}</_.DecoText>
                   </_.DecoSet>
-                  <_.DecoSpan>{">"}</_.DecoSpan>
+                  <_.DecoSpan onClick={() => router.push(item.nav)}>
+                    {">"}
+                  </_.DecoSpan>
                 </_.SubItem>
               ))}
               {i == 1 && (
