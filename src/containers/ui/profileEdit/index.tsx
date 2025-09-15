@@ -3,6 +3,7 @@ import { useUserStore } from "@/store/user";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import Btn from "@/components/button/button";
 
 const ProfileEdit = () => {
   const user = useUserStore((s) => s.user);
@@ -33,26 +34,28 @@ const ProfileEdit = () => {
   };
   return (
     <_.Container>
-      <Image
-        src={user.img}
-        alt={"프로필사진"}
-        width={150}
-        height={150}
-        style={{ borderRadius: "100px" }}
-      />
-      <div>
-        {userInput.map((item, i) => (
-          <div key={i}>
-            <div>{item.name}</div>
-            <input
-              type={"text"}
-              value={item.value}
-              onChange={(e) => item.setValue(e.target.value)}
-            />
-          </div>
-        ))}
-      </div>
-      <div onClick={handleSubmit}>수정하기</div>
+      <_.BasicSet>
+        <Image
+          src={user.img}
+          alt={"프로필사진"}
+          width={150}
+          height={150}
+          style={{ borderRadius: "100px" }}
+        />
+        <_.EditSet>
+          {userInput.map((item, i) => (
+            <_.EditItem key={i}>
+              <_.EditText>{item.name}</_.EditText>
+              <_.EditInput
+                type={"text"}
+                value={item.value}
+                onChange={(e) => item.setValue(e.target.value)}
+              />
+            </_.EditItem>
+          ))}
+        </_.EditSet>
+      </_.BasicSet>
+      <Btn onClick={handleSubmit}>수정하기</Btn>
     </_.Container>
   );
 };
