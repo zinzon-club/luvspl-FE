@@ -23,7 +23,7 @@ export const settingGroup = [
     item: [
       {
         name: "프로필 정보",
-        nav: "/proflie",
+        nav: "/profile",
       },
     ],
   },
