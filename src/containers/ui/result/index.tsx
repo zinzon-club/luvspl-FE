@@ -1,7 +1,7 @@
 import * as _ from './style';
 import { data } from './data';
 import { useRouter } from 'next/navigation';
-import Btn from '@/components/button/button';
+import Btn from '@/components/button';
 import AnalyzingResult from '@/components/analyzingResult';
 
 export default function Result() {

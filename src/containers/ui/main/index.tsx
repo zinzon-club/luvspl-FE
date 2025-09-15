@@ -1,5 +1,5 @@
 import * as _ from './sytle';
-import Btn from '@/components/button/button';
+import Btn from '@/components/button';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
