@@ -48,7 +48,7 @@ export const Title = styled.div`
 
 export const SubTitle = styled.div`
   font-size: 1.75rem;
-  color: #B2B7B2;
+  color: #b2b7b2;
 `;
 
 export const Guide = styled.div`

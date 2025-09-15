@@ -1,7 +1,7 @@
 "use client";
 
-import GlobalStyle from '@/styles/GlobalStyle';
-import styled from '@emotion/styled';
+import GlobalStyle from "@/styles/GlobalStyle";
+import styled from "@emotion/styled";
 
 export default function RootLayout({
   children,

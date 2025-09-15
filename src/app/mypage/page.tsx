@@ -3,10 +3,10 @@
 import Mypage from "@/containers/ui/mypage";
 
 const MyPage = () => {
-    return(
-        <>
-            <Mypage/>
-        </>
-    );
-}
+  return (
+    <>
+      <Mypage />
+    </>
+  );
+};
 export default MyPage;

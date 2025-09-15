@@ -1,9 +1,7 @@
-"use client"
+"use client";
 
 import Result from "@/containers/ui/result";
 
-export default function MainPage(){
-    return (
-        <Result />
-    );
+export default function MainPage() {
+  return <Result />;
 }

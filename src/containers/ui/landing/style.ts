@@ -46,7 +46,7 @@ export const SubTitle = styled.div`
 
 export const Login = styled.button`
   font-size: 1.5rem;
-  color: #B2B7B2;
+  color: #b2b7b2;
   border: none;
   background-color: transparent;
   cursor: pointer;

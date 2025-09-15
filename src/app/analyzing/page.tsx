@@ -1,9 +1,7 @@
-"use client"
+"use client";
 
 import Analyzing from "@/containers/ui/analyzing";
 
-export default function AnalyzingPage(){
-    return (
-        <Analyzing />
-    );
+export default function AnalyzingPage() {
+  return <Analyzing />;
 }
