@@ -1,5 +1,3 @@
-"use client";
-
 import GlobalStyle from "@/styles/GlobalStyle";
 import styled from "@emotion/styled";
 
