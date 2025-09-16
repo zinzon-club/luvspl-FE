@@ -8,6 +8,5 @@ export const ABeePudding = css`
     font-weight: normal;
     font-display: swap;
   }
-
   font-family: "ABeePudding", sans-serif;
 `;

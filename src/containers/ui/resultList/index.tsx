@@ -2,7 +2,7 @@ import * as _ from "./style";
 import data from "@/store/resultList";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import AnalyzingResult from "@/components/analyzingResult/analyzingResult";
+import AnalyzingResult from "@/components/analyzingResult";
 import Btoggle from "@/../public/assets/toggle/btoggle.svg";
 import Rtoggle from "@/../public/assets/toggle/Rtoggle.svg";
 import Image from "next/image";
@@ -33,7 +33,7 @@ const ResultList = () => {
               </_.ToggleSet>
               {isOpen &&
                 item.item.map((it, j) => (
-                  <_.Group key={it.id ?? j}>
+                  <_.Group key={j}>
                     <_.SubTitle>{it.title}</_.SubTitle>
                     <AnalyzingResult
                       type={it.type as "stat" | "advice"}
