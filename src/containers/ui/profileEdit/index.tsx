@@ -1,3 +1,5 @@
+"use client";
+
 import * as _ from "./style";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
