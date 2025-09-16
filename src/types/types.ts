@@ -23,3 +23,9 @@ export type UserStore = {
   patchUser: (u: Partial<User>) => void; // 일부만 업데이트
   reset: () => void; // 초기값으로 리셋
 };
+
+export type EditField = {
+  name: string;
+  value: string;
+  setValue: (v: string) => void;
+};
