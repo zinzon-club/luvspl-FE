@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import * as _ from "./style";
 import Image from "next/image";
-import Btn from "@/components/button/button";
+import Btn from "@/components/button";
 import { useRouter } from 'next/navigation';
 import { data } from './data';
 
