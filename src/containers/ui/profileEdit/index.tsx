@@ -3,7 +3,7 @@ import { useUserStore } from "@/store/user";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import Btn from "@/components/button/button";
+import Btn from "@/components/button";
 
 const ProfileEdit = () => {
   const user = useUserStore((s) => s.user);
