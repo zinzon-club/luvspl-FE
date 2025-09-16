@@ -16,7 +16,7 @@ const Mypage = () => {
       <_.InfoContainer>
         <Image
           src={info.img}
-          alt={"프로필사진"}
+          alt="프로필사진"
           width={150}
           height={150}
           style={{ borderRadius: "100px" }}
