@@ -13,7 +13,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 400px;
   height: 100vh;
-  margin-top: 20vh;
+  padding-top: 10vh;
   flex-direction: column;
   gap: 4rem;
   cursor: default;
@@ -24,7 +24,7 @@ export const NavSet = styled.div`
   align-items: center;
   width: 100%;
   max-width: 400px;
-  gap: 8rem;
+  gap: 7.5rem;
 `;
 export const ResultSet = styled.div`
   display: flex;
@@ -55,6 +55,7 @@ export const SubTitle = styled.div`
   font-size: 1rem;
 `;
 export const TitleSet = styled.div`
-  ${Basic};
+  display: flex;
+  align-items: center;
   flex-direction: column;
 `;

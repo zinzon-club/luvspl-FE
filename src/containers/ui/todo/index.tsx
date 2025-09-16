@@ -39,7 +39,11 @@ export default function Todo() {
               src={item.done ? IsDone : NotDone}
               alt={"todo"}
               onClick={() => {
-                setTodo(!item.value);
+                setTodo((prev) =>
+                  prev.map((t, idx) =>
+                    idx === i ? { ...t, done: !t.done } : t,
+                  ),
+                );
               }}
             />
             <div>{item.value}</div>
