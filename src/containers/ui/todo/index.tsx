@@ -5,24 +5,12 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import IsDone from "@/../public/assets/clover/isDone.svg";
 import NotDone from "@/../public/assets/clover/notDone.svg";
+import data from "./data";
 import Image from "next/image";
 
 export default function Todo() {
   const router = useRouter();
-  const [todo, setTodo] = useState([
-    {
-      value: "일기 쓰기",
-      done: false,
-    },
-    {
-      value: "청소 하기",
-      done: false,
-    },
-    {
-      value: "영단어 외우기",
-      done: true,
-    },
-  ]);
+  const [todo, setTodo] = useState(data);
   return (
     <_.Container>
       <_.NavSet>
@@ -33,22 +21,25 @@ export default function Todo() {
         </_.TitleSet>
       </_.NavSet>
       <_.ResultSet>
-        {todo.map((item, i) => (
-          <_.ResultItem key={i}>
-            <Image
-              src={item.done ? IsDone : NotDone}
-              alt={"todo"}
-              onClick={() => {
-                setTodo((prev) =>
-                  prev.map((t, idx) =>
-                    idx === i ? { ...t, done: !t.done } : t,
-                  ),
-                );
-              }}
-            />
-            <div>{item.value}</div>
-          </_.ResultItem>
-        ))}
+        {todo
+          .slice()
+          .sort((a, b) => Number(a.done) - Number(b.done))
+          .map((item) => (
+            <_.ResultItem key={item.id}>
+              <Image
+                src={item.done ? IsDone : NotDone}
+                alt="todo"
+                onClick={() =>
+                  setTodo((prev) =>
+                    prev.map((t) =>
+                      t.id === item.id ? { ...t, done: !t.done } : t,
+                    ),
+                  )
+                }
+              />
+              <div>{item.value}</div>
+            </_.ResultItem>
+          ))}
       </_.ResultSet>
     </_.Container>
   );
