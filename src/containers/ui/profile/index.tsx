@@ -8,7 +8,7 @@ const Profile = () => {
   const router = useRouter();
   return (
     <_.Container>
-      <_.NavDeco onClick={() => router.push(`/main`)}>{"<"}</_.NavDeco>
+      <_.NavDeco onClick={() => router.push(`/mypage`)}>{"<"}</_.NavDeco>
       <Image
         src={user.img}
         alt={"프로필사진"}
