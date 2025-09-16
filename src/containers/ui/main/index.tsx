@@ -47,6 +47,7 @@ export default function Main() {
           width={24}
           height={24}
           style={{ transform: "rotate(180deg)", cursor: "pointer" }}
+          onClick={() => router.push("/mypage")}
         />
       </_.Wrapper>
       <Btn onClick={() => router.push("/analyzing")}>데이터 삽입</Btn>
