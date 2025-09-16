@@ -1,5 +1,6 @@
 import GlobalStyle from "@/styles/GlobalStyle";
 import styled from "@emotion/styled";
+import React from "react";
 
 export default function RootLayout({
   children,
