@@ -8,7 +8,6 @@ import Btn from "@/components/button";
 const ProfileEdit = () => {
   const user = useUserStore((s) => s.user);
   const setUser = useUserStore((s) => s.setUser);
-  // setUser: (u: User) => void;
   const [name, setName] = useState(user.name);
   const [mail, setMail] = useState(user.mail);
   const userInput = [
