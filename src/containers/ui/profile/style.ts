@@ -13,7 +13,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 400px;
   height: 100vh;
-  margin-top: 35vh;
+  margin-top: 32vh;
   flex-direction: column;
   gap: 2rem;
 `;
@@ -47,4 +47,10 @@ export const EditButton = styled.div`
     color: ${color.white};
     background-color: ${color.primary};
   }
+`;
+export const NavDeco = styled.div`
+  color: ${color.gray400};
+  font-size: 1.75rem;
+  cursor: pointer;
+  width: 100%;
 `;

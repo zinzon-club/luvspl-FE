@@ -76,3 +76,9 @@ export const DecoSpan = styled.div`
   padding: 0 0.5rem;
   cursor: pointer;
 `;
+export const NavDeco = styled.div`
+  color: ${color.gray400};
+  font-size: 1.75rem;
+  cursor: pointer;
+  width: 100%;
+`;

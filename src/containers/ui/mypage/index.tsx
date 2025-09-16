@@ -12,6 +12,7 @@ const Mypage = () => {
 
   return (
     <_.Container>
+      <_.NavDeco onClick={() => router.push(`/main`)}>{"<"}</_.NavDeco>
       <_.InfoContainer>
         <Image
           src={info.img}
