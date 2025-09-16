@@ -49,6 +49,7 @@ export const ResultItem = styled.div`
 export const NavDeco = styled.div`
   color: ${color.gray400};
   font-size: 1.5rem;
+  cursor: pointer;
 `;
 export const Title = styled.div`
   color: ${color.black};
