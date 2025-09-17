@@ -14,7 +14,7 @@ export default function Todo() {
   return (
     <_.Container>
       <_.NavSet>
-        <_.NavDeco onClick={() => router.push(`/mypage`)}>
+        <_.NavDeco onClick={() => router.push(`/home`)}>
           <Image
             src="assets/arrow.svg"
             alt="arrow"

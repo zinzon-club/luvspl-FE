@@ -8,7 +8,7 @@ export default function Landing() {
   const router = useRouter();
 
   return (
-    <_.Container onClick={() => router.push("/main")}>
+    <_.Container onClick={() => router.push("/home")}>
       <_.Group>
         <Image
           src="/assets/gif/cup.gif"
