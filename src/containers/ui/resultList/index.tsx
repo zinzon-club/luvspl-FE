@@ -14,7 +14,15 @@ const ResultList = () => {
   return (
     <_.Container>
       <_.NavSet>
-        <_.NavDeco onClick={() => router.push(`/mypage`)}>{"<"}</_.NavDeco>
+        <_.NavDeco onClick={() => router.push(`/mypage`)}>
+          <Image
+            src="assets/arrow.svg"
+            alt="arrow"
+            width={24}
+            height={24}
+            style={{ cursor: "pointer" }}
+          />
+        </_.NavDeco>
         <_.Title>저장된 분석 결과</_.Title>
       </_.NavSet>
 

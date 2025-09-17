@@ -28,7 +28,7 @@ export const NavSet = styled.div`
   align-items: center;
   width: 100%;
   max-width: 400px;
-  gap: 8rem;
+  gap: 7.5rem;
 `;
 export const ResultSet = styled.div`
   display: flex;

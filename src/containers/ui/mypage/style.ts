@@ -8,11 +8,12 @@ const Basic = `
 `;
 
 export const Container = styled.div`
-  ${Basic};
+  display: flex;
   width: 100%;
   max-width: 400px;
   height: 100vh;
   flex-direction: column;
+  padding-top: 15vh;
   gap: 2rem;
 `;
 export const InfoContainer = styled.div`

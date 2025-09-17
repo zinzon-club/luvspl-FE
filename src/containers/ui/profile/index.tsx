@@ -8,7 +8,16 @@ const Profile = () => {
   const router = useRouter();
   return (
     <_.Container>
-      <_.NavDeco onClick={() => router.push(`/mypage`)}>{"<"}</_.NavDeco>
+      <_.NavDeco onClick={() => router.push(`/mypage`)}>
+        {" "}
+        <Image
+          src="assets/arrow.svg"
+          alt="arrow"
+          width={24}
+          height={24}
+          style={{ cursor: "pointer" }}
+        />
+      </_.NavDeco>
       <Image
         src={user.img}
         alt={"프로필사진"}

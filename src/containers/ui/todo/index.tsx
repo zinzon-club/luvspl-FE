@@ -14,7 +14,15 @@ export default function Todo() {
   return (
     <_.Container>
       <_.NavSet>
-        <_.NavDeco onClick={() => router.push(`/mypage`)}>{"<"}</_.NavDeco>
+        <_.NavDeco onClick={() => router.push(`/mypage`)}>
+          <Image
+            src="assets/arrow.svg"
+            alt="arrow"
+            width={24}
+            height={24}
+            style={{ cursor: "pointer" }}
+          />
+        </_.NavDeco>
         <_.TitleSet>
           <_.Title>오늘의 할일</_.Title>
           <_.SubTitle>할 일을 누르면 할 일이 완료됩니다</_.SubTitle>
