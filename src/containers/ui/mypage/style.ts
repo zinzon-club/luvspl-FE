@@ -53,6 +53,7 @@ export const SubTitle = styled.div`
 export const SubContainer = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 `;
 export const SubItem = styled.div`
   display: flex;

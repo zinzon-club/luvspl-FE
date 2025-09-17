@@ -1,24 +1,19 @@
 import styled from "@emotion/styled";
 import { color } from "@/styles/theme";
 
-const Basic = `
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
 export const Container = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
   max-width: 400px;
-  height: 100vh;
-  padding-top: 12vh;
+  height: 80vh;
+  padding-top: 2vh;
   flex-direction: column;
   gap: 4rem;
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+
   &::-webkit-scrollbar {
     display: none;
   }
