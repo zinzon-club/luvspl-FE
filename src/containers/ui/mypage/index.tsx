@@ -2,8 +2,8 @@ import * as _ from "./style";
 import { info, settingGroup } from "./data";
 import Image from "next/image";
 import { useState } from "react";
-import Off from "@/../public/assets/toggleBtn/toggleOff.svg";
-import On from "@/../public/assets/toggleBtn/toggleOn.svg";
+// import Off from "@/../public/assets/toggleBtn/toggleOff.svg";
+// import On from "@/../public/assets/toggleBtn/toggleOn.svg";
 import { useRouter } from "next/navigation";
 
 const Mypage = () => {
@@ -64,9 +64,14 @@ const Mypage = () => {
                     <_.DecoText>챗봇 활성화</_.DecoText>
                   </_.DecoSet>
                   <Image
-                    src={toggle ? On : Off}
+                    src={
+                      toggle
+                        ? "/assets/toggleBtn/toggleOn.svg"
+                        : "/assets/toggleBtn/toggleOff.svg"
+                    }
                     alt="on"
                     width={36}
+                    height={24}
                     onClick={() => setToggle(!toggle)}
                   />
                 </_.SubItem>
