@@ -13,7 +13,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 400px;
   height: 100vh;
-  padding-top: 15vh;
+  padding-top: 12vh;
   flex-direction: column;
   gap: 4rem;
   cursor: default;
@@ -21,7 +21,6 @@ export const Container = styled.div`
 
 export const NavSet = styled.div`
   display: flex;
-  align-items: center;
   width: 100%;
   max-width: 400px;
   gap: 6.5rem;
