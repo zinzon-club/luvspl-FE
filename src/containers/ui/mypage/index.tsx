@@ -2,8 +2,6 @@ import * as _ from "./style";
 import { info, settingGroup } from "./data";
 import Image from "next/image";
 import { useState } from "react";
-// import Off from "@/../public/assets/toggleBtn/toggleOff.svg";
-// import On from "@/../public/assets/toggleBtn/toggleOn.svg";
 import { useRouter } from "next/navigation";
 
 const Mypage = () => {
