@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { ABeePudding } from "@/styles/Font";
+import { color } from "@/styles/theme";
 
 const Basic = `
   display: flex;
@@ -7,7 +8,7 @@ const Basic = `
 `;
 
 export const Container = styled.div`
-  ${Basic}
+  ${Basic};
   width: 100%;
   max-width: 400px;
   height: 80vh;
@@ -22,24 +23,24 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  ${Basic}
+  ${Basic};
   width: 100%;
   row-gap: 3rem;
 `;
 
 export const Title = styled.div`
-  ${ABeePudding}
+  ${ABeePudding};
   font-size: 3rem;
   text-align: center;
 `;
 
 export const SubTitle = styled.div`
   font-size: 1.75rem;
-  color: #545654;
+  color: ${color.gray700};
 `;
 
 export const Group = styled.div`
-  ${Basic}
+  ${Basic};
   width: 100%;
   row-gap: 2.25rem;
 `;

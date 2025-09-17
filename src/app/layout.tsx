@@ -1,7 +1,8 @@
 "use client";
 
-import GlobalStyle from '@/styles/GlobalStyle';
-import styled from '@emotion/styled';
+import GlobalStyle from "@/styles/GlobalStyle";
+import styled from "@emotion/styled";
+import React from "react";
 
 export default function RootLayout({
   children,
@@ -9,8 +10,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <Container>
           <GlobalStyle />
           {children}

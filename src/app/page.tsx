@@ -1,9 +1,7 @@
-"use client"
+"use client";
 
 import Landing from "@/containers/ui/landing";
 
-export default function LandingPage(){
-    return (
-        <Landing />
-    );
+export default function LandingPage() {
+  return <Landing />;
 }

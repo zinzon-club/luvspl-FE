@@ -19,12 +19,12 @@ export const ResultImage = styled.div`
   width: 100%;
   height: 4vh;
   border-radius: 99rem;
-  background: linear-gradient(to right, #BECAB6, #F8E7EA);
+  background: linear-gradient(to right, #becab6, #f8e7ea);
 `;
 
 export const Number = styled.div`
   font-size: 1rem;
-  color: #B2B7B2;
+  color: #b2b7b2;
 `;
 
 export const NumberGroup = styled.div`
