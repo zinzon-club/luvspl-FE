@@ -8,7 +8,7 @@ const Profile = () => {
   const router = useRouter();
   return (
     <_.Container>
-      <_.NavDeco onClick={() => router.push(`/mypage`)}>
+      <_.NavDeco onClick={() => router.push(`/home`)}>
         {" "}
         <Image
           src="assets/arrow.svg"

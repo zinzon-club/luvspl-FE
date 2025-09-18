@@ -22,7 +22,7 @@ export default function Result() {
                     </_.Group>
                 ))}
             </_.Wrapper>
-            <Btn onClick={() => router.push('/main')}>홈으로</Btn>
+            <Btn onClick={() => router.push('/home')}>홈으로</Btn>
         </_.Container>
     );
 }

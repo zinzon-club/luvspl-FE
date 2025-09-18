@@ -10,15 +10,6 @@ const Mypage = () => {
 
   return (
     <_.Container>
-      <_.NavDeco onClick={() => router.push(`/main`)}>
-        <Image
-          src="assets/arrow.svg"
-          alt="arrow"
-          width={24}
-          height={24}
-          style={{ cursor: "pointer" }}
-        />
-      </_.NavDeco>
       <_.InfoContainer>
         <Image
           src={info.img}
