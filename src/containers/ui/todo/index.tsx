@@ -37,6 +37,7 @@ export default function Todo() {
               <Image
                 src={item.done ? IsDone : NotDone}
                 alt="todo"
+                style={{ cursor: 'pointer' }}
                 onClick={() =>
                   setTodo((prev) =>
                     prev.map((t) =>
