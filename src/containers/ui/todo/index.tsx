@@ -34,10 +34,9 @@ export default function Todo() {
           .sort((a, b) => Number(a.done) - Number(b.done))
           .map((item) => (
             <_.ResultItem key={item.id}>
-              <Image
+              <_.Clover
                 src={item.done ? IsDone : NotDone}
                 alt="todo"
-                style={{ cursor: 'pointer' }}
                 onClick={() =>
                   setTodo((prev) =>
                     prev.map((t) =>
@@ -45,6 +44,7 @@ export default function Todo() {
                     ),
                   )
                 }
+                done={item.done}
               />
               <div>{item.value}</div>
             </_.ResultItem>

@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 import { color } from "@/styles/theme";
+import Image from "next/image";
+import isPropValid from "@emotion/is-prop-valid"; // props를 필터링
 
 export const Container = styled.div`
   display: flex;
@@ -57,4 +59,17 @@ export const TitleSet = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+`;
+
+export const Clover = styled(Image, {
+  shouldForwardProp: (prop) => isPropValid(prop) && prop !== "done",
+}) <{ done: boolean }>`
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: ${({ done }) => (done ? "rotate(-15deg) scale(0.9)" : "rotate(0deg) scale(1)")};
+
+  &:hover {
+    transform: ${({ done }) =>
+    done ? "rotate(-20deg) scale(0.95)" : "rotate(10deg) scale(1.05)"};
+  }
 `;
