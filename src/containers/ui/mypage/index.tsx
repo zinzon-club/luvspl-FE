@@ -62,6 +62,7 @@ const Mypage = () => {
                     width={36}
                     height={24}
                     onClick={() => setToggle(!toggle)}
+                    style={{ cursor: 'pointer' }}
                   />
                 </_.SubItem>
               )}

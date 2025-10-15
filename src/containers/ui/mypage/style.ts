@@ -14,13 +14,13 @@ export const Container = styled.div`
   height: 100vh;
   flex-direction: column;
   gap: 2rem;
-  padding: 16vh 0.6rem;
+  padding: 17vh 0.6rem;
 `;
 
 export const InfoContainer = styled.div`
   ${Basic};
   width: 100%;
-  gap: 0.5rem;
+  gap: 1rem;
   flex-direction: column;
 `;
 
@@ -46,7 +46,7 @@ export const SettingInfoContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.5rem;
 `;
 
 export const SubTitle = styled.div`

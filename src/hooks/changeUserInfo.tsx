@@ -14,7 +14,6 @@ export const useChangeUserInfo = () => {
   const userInput: EditField[] = useMemo(
     () => [
       { name: "이름", value: name, setValue: setName },
-      { name: "계정", value: mail, setValue: setMail },
     ],
     [name, mail],
   );

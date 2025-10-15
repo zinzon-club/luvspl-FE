@@ -12,22 +12,24 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   max-width: 400px;
-  height: 100vh;
-  padding-top: 19vh;
+  height: 63vh;
   flex-direction: column;
-  gap: 7.5rem;
+  gap: 15rem;
 `;
+
 export const BasicSet = styled.div`
   ${Basic};
   width: 100%;
   flex-direction: column;
   gap: 2rem;
 `;
+
 export const EditSet = styled.div`
   ${Basic};
   width: 100%;
   flex-direction: column;
 `;
+
 export const EditItem = styled.div`
   display: flex;
   justify-content: center;
@@ -36,11 +38,13 @@ export const EditItem = styled.div`
   flex-direction: column;
   gap: 1rem;
 `;
+
 export const EditText = styled.div`
   color: ${color.gray600};
   font-size: 1.5rem;
   padding: 0 0.25rem;
 `;
+
 export const EditInput = styled.input`
   color: ${color.gray600};
   font-size: 1.5rem;

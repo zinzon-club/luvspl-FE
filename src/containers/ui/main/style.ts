@@ -13,7 +13,7 @@ export const Container = styled.div`
   ${Basic};
   width: 100%;
   max-width: 400px;
-  height: 100vh;
+  height: 95vh;
   row-gap: 4rem;
 `;
 

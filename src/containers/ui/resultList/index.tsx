@@ -3,13 +3,11 @@ import data from "@/store/resultList";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import AnalyzingResult from "@/components/analyzingResult";
-import Btoggle from "@/../public/assets/toggle/btoggle.svg";
-import Rtoggle from "@/../public/assets/toggle/Rtoggle.svg";
 import Image from "next/image";
 
 const ResultList = () => {
   const router = useRouter();
-  const [openIndex, setOpenIndex] = useState<number | null>(null); // 어떤 아이템이 열렸는지
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <_.Container>
@@ -25,7 +23,6 @@ const ResultList = () => {
         </_.NavDeco>
         <_.Title>저장된 분석 결과</_.Title>
       </_.NavSet>
-
       <_.ResultSet>
         {data.map((item, i) => {
           const isOpen = openIndex === i;
@@ -36,7 +33,9 @@ const ResultList = () => {
                 role="button"
                 aria-expanded={isOpen}
               >
-                <Image src={isOpen ? Btoggle : Rtoggle} alt={"토글"} />
+                <_.ToggleImage isOpen={isOpen}>
+                  <Image src="assets/toggle.svg" alt="토글" width={24} height={24} />
+                </_.ToggleImage>
                 <_.ToggleDate>{item.date}</_.ToggleDate>
               </_.ToggleSet>
               {isOpen &&
