@@ -1,8 +1,9 @@
-"use client";
+'use client'
 
 import GlobalStyle from "@/styles/GlobalStyle";
 import styled from "@emotion/styled";
 import React from "react";
+import Providers from "./providers";
 
 export default function RootLayout({
   children,
@@ -10,11 +11,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body suppressHydrationWarning>
+    <html lang="en">
+      <body>
+        <GlobalStyle />
         <Container>
-          <GlobalStyle />
-          {children}
+          <Providers>{children}</Providers>
         </Container>
       </body>
     </html>
@@ -27,7 +28,6 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 100dvh;
-  max-height: 100dvh;
   background-image: url("/assets/BG.svg");
   background-repeat: no-repeat;
   background-position: center;
