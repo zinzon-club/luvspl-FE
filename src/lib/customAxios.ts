@@ -6,11 +6,23 @@ const customAxios = axios.create({
   withCredentials: true,
 });
 
+const PUBLIC_ENDPOINTS = [
+  "/auth/kakao/login",
+  "/auth/kakao/callback",
+];
+
 customAxios.interceptors.request.use(config => {
-  const token = localStorage.getItem("token");
-  if (token && config.headers) {
-    config.headers.Authorization = `Bearer ${token}`;
+  const isPublicEndpoint = PUBLIC_ENDPOINTS.some(endpoint =>
+    config.url?.includes(endpoint)
+  );
+
+  if (!isPublicEndpoint) {
+    const token = localStorage.getItem("token");
+    if (token && config.headers) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
   }
+
   return config;
 });
 
