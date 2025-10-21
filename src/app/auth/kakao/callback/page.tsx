@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useKakaoLogin } from "@/hooks/useAuth";
-import Loading from "@/app/loading";
+import Loading from "@/components/Loading";
 
 export default function OAuthCallbackPage() {
     const params = useSearchParams();
