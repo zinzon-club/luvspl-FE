@@ -1,24 +1,28 @@
 import * as _ from "./style";
-import { info, settingGroup } from "./data";
+import { settingGroup } from "./data";
 import Image from "next/image";
 import { useState } from "react";
+import { useChangeUserInfo } from "@/hooks/changeUserInfo";
 import { useRouter } from "next/navigation";
 
 const Mypage = () => {
   const router = useRouter();
   const [toggle, setToggle] = useState(false);
+  const { user } = useChangeUserInfo();
+
+  if (!user) return <div>로딩 중...</div>;
 
   return (
     <_.Container>
       <_.InfoContainer>
         <Image
-          src={info.img}
+          src={user.img || "/assets/default.svg"}
           alt="프로필사진"
           width={150}
           height={150}
           style={{ borderRadius: "100px" }}
         />
-        <_.UserName>{info.name}</_.UserName>
+        <_.UserName>{user.name}</_.UserName>
       </_.InfoContainer>
       <_.SettingContainer>
         {settingGroup.map((item, i) => (

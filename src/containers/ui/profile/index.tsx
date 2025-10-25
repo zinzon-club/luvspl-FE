@@ -21,7 +21,7 @@ const Profile = () => {
         />
       </_.NavDeco>
       <Image
-        src={user.img || "https://img1.kakaocdn.net/thumb/R640x640.q70/?fname=https://t1.kakaocdn.net/account_images/default_profile.jpeg"}
+        src={user.img || "/assets/default.svg"}
         alt="프로필사진"
         width={150}
         height={150}

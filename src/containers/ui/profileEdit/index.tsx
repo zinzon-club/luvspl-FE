@@ -21,7 +21,7 @@ const ProfileEdit = () => {
     <_.Container>
       <_.BasicSet>
         <Image
-          src={user.img || "/asstes/default.svg"}
+          src={user.img || "/assets/default.svg"}
           alt="프로필사진"
           width={150}
           height={150}
