@@ -10,8 +10,10 @@ const ProfileEdit = () => {
   const router = useRouter();
   const { user, userInput, apply } = useChangeUserInfo();
 
-  const handleSubmit = () => {
-    apply(); // 훅에서 스토어 업데이트
+  if (!user) return <div>로딩 중...</div>;
+
+  const handleSubmit = async () => {
+    await apply();
     router.push("/profile");
   };
 
@@ -19,8 +21,8 @@ const ProfileEdit = () => {
     <_.Container>
       <_.BasicSet>
         <Image
-          src={user.img}
-          alt={"프로필사진"}
+          src={user.img || "/asstes/default.svg"}
+          alt="프로필사진"
           width={150}
           height={150}
           style={{ borderRadius: "100px" }}
