@@ -13,9 +13,9 @@ export const Container = styled.div`
   width: 100%;
   max-width: 400px;
   height: 100vh;
-  padding-top: 11.2vh;
+  padding-top: 12.7vh;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 `;
 
 export const SubContainer = styled.div`
@@ -39,7 +39,7 @@ export const MailText = styled.div`
 
 export const NameText = styled.div`
   color: ${color.black};
-  font-size: 2rem;
+  font-size: 2.25rem;
 `;
 
 export const EditButton = styled.div`
