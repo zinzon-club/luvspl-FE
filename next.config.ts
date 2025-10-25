@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   images: {
-    domains: ["YOUR_SUPABASE_DOMAIN.supabase.co", "i.pinimg.com", "img1.kakaocdn.net", "t1.kakaocdn.net"],
+    domains: ["wqlrzexdxqwlxkmtjfjj.supabase.co", "i.pinimg.com", "img1.kakaocdn.net", "t1.kakaocdn.net"],
   },
 };
 
