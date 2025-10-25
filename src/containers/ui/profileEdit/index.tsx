@@ -3,7 +3,7 @@
 import * as _ from "./style";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import Btn from "@/components/button";
+import { BtnPrimary, BtnSecondary } from "@/components/button";
 import { useChangeUserInfo } from "@/hooks/changeUserInfo";
 
 const ProfileEdit = () => {
@@ -40,7 +40,10 @@ const ProfileEdit = () => {
           ))}
         </_.EditSet>
       </_.BasicSet>
-      <Btn onClick={handleSubmit}>수정하기</Btn>
+      <_.BtnGroup>
+        <BtnPrimary onClick={handleSubmit}>수정하기</BtnPrimary>
+        <BtnSecondary onClick={() => router.push('/profile')}>취소</BtnSecondary>
+      </_.BtnGroup>
     </_.Container>
   );
 };

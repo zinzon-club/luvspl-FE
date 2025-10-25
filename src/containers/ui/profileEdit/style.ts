@@ -54,3 +54,8 @@ export const EditInput = styled.input`
   border-radius: 1.5rem;
   outline: none;
 `;
+
+export const BtnGroup = styled.div`
+  display: flex;
+  width: 100%;
+`;
