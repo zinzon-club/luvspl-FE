@@ -1,5 +1,5 @@
 import * as _ from "./style";
-import Btn from "@/components/button";
+import { BtnPrimary } from "@/components/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -35,7 +35,7 @@ export default function Main() {
           </_.Inner>
         </_.Group>
       </_.Wrapper>
-      <Btn onClick={() => router.push("/analyzing")}>데이터 삽입</Btn>
+      <BtnPrimary onClick={() => router.push("/analyzing")}>데이터 삽입</BtnPrimary>
     </_.Container>
   );
 }

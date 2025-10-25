@@ -3,21 +3,29 @@ import type { BtnProps } from "@/types/types";
 import { ABeePudding } from "@/styles/Font";
 import { color } from "@/styles/theme";
 
-export default function Btn({ children, onClick }: BtnProps) {
+export function BtnPrimary({ children, onClick }: BtnProps) {
   return (
-    <Container>
-      <Button onClick={onClick}>{children}</Button>
-    </Container>
+    <BtnContainer>
+      <StyledPrimary onClick={onClick}>{children}</StyledPrimary>
+    </BtnContainer>
   );
 }
 
-const Container = styled.div`
+export function BtnSecondary({ children, onClick }: BtnProps) {
+  return (
+    <BtnContainer>
+      <StyledSecondary onClick={onClick}>{children}</StyledSecondary>
+    </BtnContainer>
+  );
+}
+
+const BtnContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
 `;
 
-const Button = styled.button`
+const StyledPrimary = styled.button`
   display: flex;
   width: 90%;
   justify-content: center;
@@ -34,6 +42,27 @@ const Button = styled.button`
 
   &:hover {
     background-color: #6B7D5C;
+    transform: scale(1.05);
+  }
+`;
+
+const StyledSecondary = styled.button`
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  padding: 0.8rem;
+  border: 1px solid ${color.primary};
+  background-color: #fafafa;
+  color: ${color.primary};
+  border-radius: 2rem;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  cursor: pointer;
+  ${ABeePudding}
+
+  &:hover {
+    background-color: ${color.gray100};
     transform: scale(1.05);
   }
 `;

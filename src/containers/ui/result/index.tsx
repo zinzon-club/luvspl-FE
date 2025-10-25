@@ -1,7 +1,7 @@
 import * as _ from './style';
 import { data } from './data';
 import { useRouter } from 'next/navigation';
-import Btn from '@/components/button';
+import { BtnPrimary } from '@/components/button';
 import AnalyzingResult from '@/components/analyzingResult';
 
 export default function Result() {
@@ -22,7 +22,7 @@ export default function Result() {
                     </_.Group>
                 ))}
             </_.Wrapper>
-            <Btn onClick={() => router.push('/home')}>홈으로</Btn>
+            <BtnPrimary onClick={() => router.push('/home')}>홈으로</BtnPrimary>
         </_.Container>
     );
 }
