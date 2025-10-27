@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import * as _ from "./style";
 import Image from "next/image";
-import Btn from "@/components/button";
+import { BtnPrimary } from "@/components/button";
 import { useRouter } from 'next/navigation';
 import { data } from './data';
 
@@ -32,7 +32,7 @@ export default function Analyzing() {
                         ))}
                 </_.Group>
             </_.Wrapper>
-            {showResult && <Btn onClick={() => router.push('/result')}>결과보기</Btn>}
+            {showResult && <BtnPrimary onClick={() => router.push('/result')}>결과보기</BtnPrimary>}
         </_.Container>
     );
 }

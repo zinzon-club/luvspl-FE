@@ -12,7 +12,7 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   max-width: 400px;
-  height: 63vh;
+  height: 66vh;
   flex-direction: column;
   gap: 15rem;
 `;
@@ -53,4 +53,9 @@ export const EditInput = styled.input`
   border: none;
   border-radius: 1.5rem;
   outline: none;
+`;
+
+export const BtnGroup = styled.div`
+  display: flex;
+  width: 100%;
 `;

@@ -11,18 +11,17 @@ export interface AnalyzingResultprops {
   advice?: string[];
 }
 
-export type User = {
-  img: string;
+export interface User {
+  id?: number;
   name: string;
-  mail: string;
-};
+  img?: string;
+}
 
-export type UserStore = {
-  user: User;
-  setUser: (u: User) => void; // 통째로 교체
-  patchUser: (u: Partial<User>) => void; // 일부만 업데이트
-  reset: () => void; // 초기값으로 리셋
-};
+export interface UserStore {
+  user: User | null;
+  setUser: (user: User) => void;
+  clearUser: () => void;
+}
 
 export type EditField = {
   name: string;
