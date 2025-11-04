@@ -11,7 +11,10 @@ export default function Slider() {
     const [index, setIndex] = useState(0);
     const [direction, setDirection] = useState(0);
 
-    const slides = [<Main />, <MyPage />];
+    const slides = [
+        <Main key="main" />,
+        <MyPage key="mypage" />,
+    ];
 
     const nextSlide = () => {
         setDirection(1);
