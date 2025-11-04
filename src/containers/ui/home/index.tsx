@@ -11,10 +11,7 @@ export default function Slider() {
     const [index, setIndex] = useState(0);
     const [direction, setDirection] = useState(0);
 
-    const slides = [
-        <Main key="main" />,
-        <MyPage key="mypage" />,
-    ];
+    const slides = [Main, MyPage];
 
     const nextSlide = () => {
         setDirection(1);
@@ -26,6 +23,8 @@ export default function Slider() {
         setIndex((prev) => (prev - 1 + slides.length) % slides.length);
     };
 
+    const CurrentSlide = slides[index];
+
     return (
         <_.Container>
             <_.ArrowBtn onClick={prevSlide}>
@@ -36,6 +35,7 @@ export default function Slider() {
                     height={24}
                 />
             </_.ArrowBtn>
+
             <_.Wrapper>
                 <AnimatePresence mode="wait" custom={direction}>
                     <motion.div
@@ -47,7 +47,7 @@ export default function Slider() {
                         transition={{ duration: 0.4 }}
                         style={{ width: "100%", height: "100%" }}
                     >
-                        {slides[index]}
+                        <CurrentSlide />
                     </motion.div>
                 </AnimatePresence>
             </_.Wrapper>
