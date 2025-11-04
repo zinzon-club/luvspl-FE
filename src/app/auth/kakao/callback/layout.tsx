@@ -1,5 +1,5 @@
-export const dynamic = "force-dynamic";
+import AuthGuard from "@/components/AuthGuard";
 
-export default function OAuthCallbackLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+export default function HomeLayout({ children }: { children: React.ReactNode }) {
+  return <AuthGuard>{children}</AuthGuard>;
 }
