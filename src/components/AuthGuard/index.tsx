@@ -1,16 +1,25 @@
 "use client";
 
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function AuthGuard({ children }: { children: ReactNode }) {
   const router = useRouter();
+  const [checked, setChecked] = useState(false);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    const token = localStorage.getItem("token");
-    if (!token) router.replace("/login");
+    const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
+
+    if (!token) {
+      router.replace("/login");
+    } else {
+      setChecked(true);
+    }
   }, [router]);
+
+  if (!checked) {
+    return <div>확인 중...</div>;
+  }
 
   return <>{children}</>;
 }
