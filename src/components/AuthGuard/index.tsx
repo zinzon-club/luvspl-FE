@@ -11,7 +11,7 @@ export default function AuthGuard({ children }: { children: ReactNode }) {
     const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
 
     if (!token) {
-      router.replace("/login");
+      router.replace("/home");
     } else {
       setChecked(true);
     }
