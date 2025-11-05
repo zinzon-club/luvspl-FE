@@ -18,6 +18,14 @@ export const Container = styled.div`
   gap: 1rem;
 `;
 
+export const Loading = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+`;
+
 export const SubContainer = styled.div`
   ${Basic};
   flex-direction: column;
