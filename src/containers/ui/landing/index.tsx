@@ -4,7 +4,8 @@ import * as _ from "./style";
 import Image from "next/image";
 
 export default function Landing() {
-  const kakaoLoginUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/kakao/login`;
+  const BASE_URL = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "");
+  const kakaoLoginUrl = `${BASE_URL}/auth/kakao/login`;
 
   const handleClick = () => {
     window.location.href = kakaoLoginUrl;
