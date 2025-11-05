@@ -18,16 +18,11 @@ export default function Slider() {
         setIndex((prev) => (prev + 1) % slides.length);
     };
 
-    const prevSlide = () => {
-        setDirection(-1);
-        setIndex((prev) => (prev - 1 + slides.length) % slides.length);
-    };
-
     const CurrentSlide = slides[index];
 
     return (
         <_.Container>
-            <_.ArrowBtn onClick={prevSlide}>
+            <_.ArrowBtn onClick={nextSlide}>
                 <Image
                     src="/assets/arrow.svg"
                     alt="prev"
