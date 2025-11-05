@@ -7,7 +7,7 @@ const Profile = () => {
   const user = useUserStore((s) => s.user);
   const router = useRouter();
 
-  if (!user) return <_.Loading>로딩중...</_.Loading>;
+  if (!user) return <_.Loading>로딩 중...</_.Loading>;
 
   return (
     <_.Container>

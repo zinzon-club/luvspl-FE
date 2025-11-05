@@ -21,6 +21,7 @@ export const Container = styled.div`
 export const Loading = styled.div`
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
   width: 100%;
   max-width: 400px;
