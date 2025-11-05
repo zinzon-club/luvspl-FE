@@ -27,7 +27,6 @@ export const Loading = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  z-index: 9999;
 `;
 
 export const SubContainer = styled.div`
