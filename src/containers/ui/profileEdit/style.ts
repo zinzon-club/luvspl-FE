@@ -17,6 +17,14 @@ export const Container = styled.div`
   gap: 15rem;
 `;
 
+export const Loading = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+`;
+
 export const BasicSet = styled.div`
   ${Basic};
   width: 100%;

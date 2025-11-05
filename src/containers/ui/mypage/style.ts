@@ -17,6 +17,14 @@ export const Container = styled.div`
   padding: 17vh 0.6rem;
 `;
 
+export const Loading = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+`;
+
 export const InfoContainer = styled.div`
   ${Basic};
   width: 100%;

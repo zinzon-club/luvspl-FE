@@ -10,7 +10,7 @@ const ProfileEdit = () => {
   const router = useRouter();
   const { user, userInput, apply } = useChangeUserInfo();
 
-  if (!user) return <div>로딩 중...</div>;
+  if (!user) return <_.Loading>로딩 중...</_.Loading>;
 
   const handleSubmit = async () => {
     await apply();

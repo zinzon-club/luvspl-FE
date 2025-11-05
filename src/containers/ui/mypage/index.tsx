@@ -10,7 +10,7 @@ const Mypage = () => {
   const [toggle, setToggle] = useState(false);
   const { user } = useChangeUserInfo();
 
-  if (!user) return <div>로딩 중...</div>;
+  if (!user) return <_.Loading>로딩 중...</_.Loading>;
 
   return (
     <_.Container>
