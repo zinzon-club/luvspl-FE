@@ -18,11 +18,15 @@ export const Container = styled.div`
 `;
 
 export const Loading = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
-  align-items: center;
-  text-align: center;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
 `;
 
 export const BasicSet = styled.div`
