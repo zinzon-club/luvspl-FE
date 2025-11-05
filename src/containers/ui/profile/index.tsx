@@ -2,12 +2,13 @@ import * as _ from "./style";
 import { useUserStore } from "@/store/useUserStore";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Loading from "@/components/Loading";
 
 const Profile = () => {
   const user = useUserStore((s) => s.user);
   const router = useRouter();
 
-  if (!user) return <_.Loading>로딩 중...</_.Loading>;
+  if (!user) return <_.Loading> <Loading /> </_.Loading>;
 
   return (
     <_.Container>

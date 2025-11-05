@@ -4,13 +4,14 @@ import Image from "next/image";
 import { useState } from "react";
 import { useChangeUserInfo } from "@/hooks/changeUserInfo";
 import { useRouter } from "next/navigation";
+import Loading from "@/components/Loading";
 
 const Mypage = () => {
   const router = useRouter();
   const [toggle, setToggle] = useState(false);
   const { user } = useChangeUserInfo();
 
-  if (!user) return <_.Loading>로딩 중...</_.Loading>;
+  if (!user) return <_.Loading> <Loading /> </_.Loading>;
 
   return (
     <_.Container>

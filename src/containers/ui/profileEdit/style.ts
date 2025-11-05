@@ -24,7 +24,7 @@ export const Loading = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20%;
+  width: 100%;
   height: 100vh;
 `;
 

@@ -5,12 +5,13 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { BtnPrimary, BtnSecondary } from "@/components/button";
 import { useChangeUserInfo } from "@/hooks/changeUserInfo";
+import Loading from "@/components/Loading";
 
 const ProfileEdit = () => {
   const router = useRouter();
   const { user, userInput, apply } = useChangeUserInfo();
 
-  if (!user) return <_.Loading>로딩 중...</_.Loading>;
+  if (!user) return <_.Loading> <Loading /> </_.Loading>;
 
   const handleSubmit = async () => {
     await apply();
