@@ -8,8 +8,8 @@ import Loading from "@/components/Loading";
 export default function OAuthCallbackPage() {
     const params = useSearchParams();
     const code = params.get("code") ?? "";
-
     const { mutate, status, error } = useKakaoLogin();
+
     const [localError, setLocalError] = useState<string | null>(null);
 
     useEffect(() => {
@@ -24,28 +24,22 @@ export default function OAuthCallbackPage() {
     if (!code) {
         return (
             <div style={{ textAlign: "center", marginTop: "20vh", color: "red" }}>
-                <Loading />
                 인가 코드가 없습니다.
             </div>
         );
     }
 
+    if (status === "pending") {
+        return <Loading />;
+    }
+
     if (status === "error") {
         return (
             <div style={{ textAlign: "center", marginTop: "20vh", color: "red" }}>
-                <Loading />
                 에러: {localError || (error as Error).message}
             </div>
         );
     }
 
-    if (status === "pending") {
-        return (
-            <>
-                <Loading />
-            </>
-        );
-    }
-
-    return null;
+    return <Loading />;
 }
