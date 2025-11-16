@@ -25,12 +25,11 @@ export default function Slider() {
             <_.ArrowBtn onClick={nextSlide}>
                 <Image
                     src="/assets/arrow.svg"
-                    alt="prev"
+                    alt="next"
                     width={24}
                     height={24}
                 />
             </_.ArrowBtn>
-
             <_.Wrapper>
                 <AnimatePresence mode="wait" custom={direction}>
                     <motion.div
