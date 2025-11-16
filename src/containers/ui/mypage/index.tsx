@@ -11,7 +11,7 @@ const Mypage = () => {
   const [toggle, setToggle] = useState(false);
   const { user } = useChangeUserInfo();
 
-  if (!user) return <_.Loading> <Loading /> </_.Loading>;
+  if (!user) return <_.Loading><Loading /></_.Loading>;
 
   return (
     <_.Container>
@@ -23,7 +23,7 @@ const Mypage = () => {
           height={150}
           style={{ borderRadius: "100px" }}
         />
-        <_.UserName>{user.name}</_.UserName>
+        <_.UserName>{user.name || "이름 없음"}</_.UserName>
       </_.InfoContainer>
       <_.SettingContainer>
         {settingGroup.map((item, i) => (
@@ -41,12 +41,10 @@ const Mypage = () => {
                     />
                     <_.DecoText>{item.name}</_.DecoText>
                   </_.DecoSet>
-                  <_.DecoSpan onClick={() => router.push(item.nav)}>
-                    {">"}
-                  </_.DecoSpan>
+                  <_.DecoSpan onClick={() => router.push(item.nav)}>{">"}</_.DecoSpan>
                 </_.SubItem>
               ))}
-              {i == 1 && (
+              {i === 1 && (
                 <_.SubItem>
                   <_.DecoSet>
                     <Image
@@ -58,12 +56,8 @@ const Mypage = () => {
                     <_.DecoText>챗봇 활성화</_.DecoText>
                   </_.DecoSet>
                   <Image
-                    src={
-                      toggle
-                        ? "/assets/toggleBtn/toggleOn.svg"
-                        : "/assets/toggleBtn/toggleOff.svg"
-                    }
-                    alt="on"
+                    src={toggle ? "/assets/toggleBtn/toggleOn.svg" : "/assets/toggleBtn/toggleOff.svg"}
+                    alt="toggle"
                     width={36}
                     height={24}
                     onClick={() => setToggle(!toggle)}
@@ -78,4 +72,5 @@ const Mypage = () => {
     </_.Container>
   );
 };
+
 export default Mypage;
