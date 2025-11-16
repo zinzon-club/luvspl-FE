@@ -1,14 +1,23 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
-import { UserStore } from "@/types/types";
+import { persist } from 'zustand/middleware';
 
-export const useUserStore = create<UserStore>()(
+import { UserState } from '@/types/auth';
+
+export const useUserStore = create<UserState>()(
   persist(
     (set) => ({
       user: null,
-      setUser: (user) => set({ user }),
-      clearUser: () => set({ user: null }),
+
+      setUser: (user) =>
+        set(() => ({
+          user,
+        })),
+
+      clearUser: () =>
+        set(() => ({
+          user: null,
+        })),
     }),
-    { name: "user-store" }
+    { name: 'user-store' }
   )
 );
