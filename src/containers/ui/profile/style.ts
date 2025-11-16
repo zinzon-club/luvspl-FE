@@ -13,7 +13,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 400px;
   height: 100vh;
-  padding-top: 12.7vh;
+  padding-top: 16.7vh;
   flex-direction: column;
   gap: 1rem;
 `;

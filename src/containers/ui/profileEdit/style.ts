@@ -12,9 +12,9 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   max-width: 400px;
-  height: 66vh;
+  height: 58vh;
   flex-direction: column;
-  gap: 15rem;
+  gap: 12.5rem;
 `;
 
 export const Loading = styled.div`
