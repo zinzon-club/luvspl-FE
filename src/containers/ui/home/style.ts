@@ -22,5 +22,7 @@ export const Wrapper = styled.div`
 export const ArrowBtn = styled.div`
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;     
   cursor: pointer;
 `;

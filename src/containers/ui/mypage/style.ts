@@ -14,7 +14,7 @@ export const Container = styled.div`
   height: 100vh;
   flex-direction: column;
   gap: 2rem;
-  padding: 17vh 0.6rem;
+  padding: 21vh 0.6rem;
 `;
 
 export const Loading = styled.div`

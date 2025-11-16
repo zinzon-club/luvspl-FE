@@ -22,7 +22,7 @@ const Profile = () => {
         />
       </_.NavDeco>
       <Image
-        src={user.img || "/assets/default.svg"}
+        src={user.profile || "/assets/default.svg"}
         alt="프로필사진"
         width={150}
         height={150}

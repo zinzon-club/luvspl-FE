@@ -1,7 +1,7 @@
 export interface JwtPayload {
-  iat: number;
-  exp: number;
-  user_id: number;
+    iat: number;
+    exp: number;
+    user_id: number;
 }
 
 export interface AuthResponse {
@@ -10,7 +10,6 @@ export interface AuthResponse {
     id: number;
     name: string;
     profile: string;
-    nickname: string | null;
   };
 }
 
@@ -18,7 +17,6 @@ export interface User {
   id: number;
   name: string;
   profile: string;
-  nickname: string | null;
 }
 
 export interface UserState {
