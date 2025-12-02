@@ -1,11 +1,34 @@
 import * as _ from "./style";
-import { BtnPrimary } from "@/components/button";
+import { InputPrimary } from "@/components/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { SetStateAction, useState } from "react";
+import Papa from "papaparse";
+
+interface CsvRow {
+  Date: string;
+  User: number;
+  Message: string;
+}
 
 export default function Main() {
+  const [csvData, setCsvData] = useState<CsvRow[] | null>(null);
   const router = useRouter();
+  const handleAnalyze = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
 
+    Papa.parse<CsvRow>(file, {
+      header: true,
+      skipEmptyLines: true,
+      dynamicTyping: true, // 숫자 자동 변환
+      complete: (results: Papa.ParseResult<CsvRow>) => {
+        console.log(results.data); // 타입이 CsvRow[]로 잡힘
+        setCsvData(results.data);
+        router.push("/analyzing");
+      },
+    });
+  };
   return (
     <_.Container>
       <_.Wrapper>
@@ -35,7 +58,7 @@ export default function Main() {
           </_.Inner>
         </_.Group>
       </_.Wrapper>
-      <BtnPrimary onClick={() => router.push("/analyzing")}>데이터 삽입</BtnPrimary>
+      <InputPrimary onChange={handleAnalyze}>데이터 삽입</InputPrimary>
     </_.Container>
   );
 }
