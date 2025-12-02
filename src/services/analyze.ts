@@ -6,7 +6,7 @@ interface CsvRow {
   Message: string;
 }
 
-export const upsertNickname = async (
+export const Analyze = async (
   user_id: string,
   csvData: CsvRow[],
   username: string,
