@@ -17,12 +17,24 @@ const nextConfig: NextConfig = {
                 hostname: "img1.kakaocdn.net",
             },
             {
+                protocol: "http",
+                hostname: "img1.kakaocdn.net",
+            },
+            {
                 protocol: "https",
                 hostname: "t1.kakaocdn.net",
             },
             {
                 protocol: "http",
-                hostname: "k.kakaocdn.net", // ← 문제된 URL 추가
+                hostname: "t1.kakaocdn.net",
+            },
+            {
+                protocol: "https",
+                hostname: "k.kakaocdn.net",
+            },
+            {
+                protocol: "http",
+                hostname: "k.kakaocdn.net",
             },
         ],
     },
