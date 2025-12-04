@@ -87,3 +87,10 @@ export const ToggleImage = styled.div<{ isOpen: boolean }>`
   transform: rotate(${props => (props.isOpen ? "90deg" : "0deg")});
   transform-origin: center;
 `;
+
+export const Message = styled.div`
+  font-size: 1rem;
+  color: ${color.gray500};
+  text-align: center;
+  padding: 1rem 0;
+`;

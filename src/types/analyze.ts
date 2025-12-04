@@ -15,3 +15,18 @@ export interface AnalyzeResultItem {
   max?: string | number;
   advice?: string[];
 }
+
+export interface AnalyzeHistoryRecord {
+  id: number | string;
+  date?: string;
+  items: AnalyzeResultItem[];
+}
+
+export type AnalyzeHistoryResponse =
+  | AnalyzeHistoryRecord[]
+  | {
+      data?: unknown;
+      history?: unknown;
+      analyses?: unknown;
+      user_id?: number;
+    };
