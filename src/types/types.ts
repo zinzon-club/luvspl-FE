@@ -11,8 +11,8 @@ export interface InputProps {
 export interface AnalyzingResultprops {
   type: "stat" | "advice";
   often?: string;
-  min?: number;
-  max?: number;
+  min?: number | string;
+  max?: number | string;
   advice?: string[];
 }
 

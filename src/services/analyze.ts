@@ -1,24 +1,23 @@
 import customAxios from "@/lib/customAxios";
-
-interface CsvRow {
-  Date: string;
-  User: number;
-  Message: string;
-}
+import { AnalyzeResultItem } from "@/types/analyze";
 
 export const Analyze = async (
-  user_id: string,
-  csvData: CsvRow[],
+  user_id: number,
+  csvFile: File,
   username: string,
 ) => {
-  const response = await customAxios.post(
+  const formData = new FormData();
+  formData.append("file", csvFile);
+  formData.append("username", username);
+
+  const response = await customAxios.post<AnalyzeResultItem[]>(
     `/analyze`,
-    {
-      file: csvData,
-      username,
-    },
+    formData,
     {
       params: { user_id },
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
     },
   );
 

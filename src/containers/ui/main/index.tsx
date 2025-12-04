@@ -2,18 +2,15 @@ import * as _ from "./style";
 import { InputPrimary } from "@/components/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { SetStateAction, useState } from "react";
 import Papa from "papaparse";
-
-interface CsvRow {
-  Date: string;
-  User: number;
-  Message: string;
-}
+import { useAnalyzeStore } from "@/store/useAnalyzeStore";
+import { CsvRow } from "@/types/analyze";
 
 export default function Main() {
-  const [csvData, setCsvData] = useState<CsvRow[] | null>(null);
   const router = useRouter();
+  const setFile = useAnalyzeStore((s) => s.setFile);
+  const clearAnalyze = useAnalyzeStore((s) => s.clear);
+
   const handleAnalyze = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -23,11 +20,18 @@ export default function Main() {
       skipEmptyLines: true,
       dynamicTyping: true, // 숫자 자동 변환
       complete: (results: Papa.ParseResult<CsvRow>) => {
-        console.log(results.data); // 타입이 CsvRow[]로 잡힘
-        setCsvData(results.data);
+        if (!results.data?.length) {
+          alert("유효한 CSV 데이터를 찾지 못했어요.");
+          return;
+        }
+        clearAnalyze();
+        setFile(file);
         router.push("/analyzing");
       },
+      error: () => alert("파일을 불러오지 못했어요. 다시 시도해주세요."),
     });
+
+    e.target.value = "";
   };
   return (
     <_.Container>
