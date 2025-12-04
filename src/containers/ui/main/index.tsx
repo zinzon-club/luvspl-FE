@@ -1,11 +1,38 @@
 import * as _ from "./style";
-import { BtnPrimary } from "@/components/button";
+import { InputPrimary } from "@/components/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Papa from "papaparse";
+import { useAnalyzeStore } from "@/store/useAnalyzeStore";
+import { CsvRow } from "@/types/analyze";
 
 export default function Main() {
   const router = useRouter();
+  const setFile = useAnalyzeStore((s) => s.setFile);
+  const clearAnalyze = useAnalyzeStore((s) => s.clear);
 
+  const handleAnalyze = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    Papa.parse<CsvRow>(file, {
+      header: true,
+      skipEmptyLines: true,
+      dynamicTyping: true, // 숫자 자동 변환
+      complete: (results: Papa.ParseResult<CsvRow>) => {
+        if (!results.data?.length) {
+          alert("유효한 CSV 데이터를 찾지 못했어요.");
+          return;
+        }
+        clearAnalyze();
+        setFile(file);
+        router.push("/analyzing");
+      },
+      error: () => alert("파일을 불러오지 못했어요. 다시 시도해주세요."),
+    });
+
+    e.target.value = "";
+  };
   return (
     <_.Container>
       <_.Wrapper>
@@ -35,7 +62,7 @@ export default function Main() {
           </_.Inner>
         </_.Group>
       </_.Wrapper>
-      <BtnPrimary onClick={() => router.push("/analyzing")}>데이터 삽입</BtnPrimary>
+      <InputPrimary onChange={handleAnalyze}>데이터 삽입</InputPrimary>
     </_.Container>
   );
 }

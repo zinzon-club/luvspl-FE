@@ -3,11 +3,16 @@ export interface BtnProps {
   onClick?: () => void;
 }
 
+export interface InputProps {
+  children: React.ReactNode;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
 export interface AnalyzingResultprops {
   type: "stat" | "advice";
   often?: string;
-  min?: number;
-  max?: number;
+  min?: number | string;
+  max?: number | string;
   advice?: string[];
 }
 
