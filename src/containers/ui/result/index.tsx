@@ -10,15 +10,15 @@ import { AnalyzeResultItem } from "@/types/analyze";
 export default function Result() {
   const router = useRouter();
   const queryClient = useQueryClient();
-  const { result, setResult } = useAnalyzeStore((s) => ({
-    result: s.result,
-    setResult: s.setResult,
-  }));
+  const result = useAnalyzeStore((s) => s.result);
+  const setResult = useAnalyzeStore((s) => s.setResult);
 
   useEffect(() => {
     if (result?.length) return;
 
-    const cached = queryClient.getQueryData<AnalyzeResultItem[]>(["analyzeResult"]);
+    const cached = queryClient.getQueryData<AnalyzeResultItem[]>([
+      "analyzeResult",
+    ]);
     if (cached?.length) {
       setResult(cached);
       return;
