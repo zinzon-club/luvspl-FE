@@ -30,7 +30,7 @@ customAxios.interceptors.response.use(response => response, error => {
   if (error.response?.status === 401) {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-    window.location.replace("/login");
+    window.location.replace("/main");
   }
   return Promise.reject(error);
 });
