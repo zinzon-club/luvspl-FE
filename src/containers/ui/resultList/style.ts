@@ -6,10 +6,10 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   max-width: 400px;
-  height: 80vh;
-  padding-top: 2vh;
+  height: 70vh;
+  padding-top: 1vh;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;

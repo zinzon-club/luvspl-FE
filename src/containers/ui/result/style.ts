@@ -11,7 +11,7 @@ export const Container = styled.div`
   ${Basic};
   width: 100%;
   max-width: 400px;
-  height: 80vh;
+  height: 70vh;
   row-gap: 4rem;
   padding: 0 1rem;
   overflow-y: auto;
@@ -25,7 +25,7 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   ${Basic};
   width: 100%;
-  row-gap: 3rem;
+  row-gap: 2rem;
 `;
 
 export const Title = styled.div`

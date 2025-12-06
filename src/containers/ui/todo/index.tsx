@@ -1,16 +1,24 @@
 "use client";
 
 import * as _ from "./style";
-import { useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import IsDone from "@/../public/assets/clover/isDone.svg";
 import NotDone from "@/../public/assets/clover/notDone.svg";
-import data from "./data";
-import Image from "next/image";
+import Loading from "@/components/Loading";
+import useTodos from "@/hooks/useTodo";
 
 export default function Todo() {
   const router = useRouter();
-  const [todo, setTodo] = useState(data);
+  const { todo, loading, toggleTodo } = useTodos();
+
+  if (loading)
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
+
   return (
     <_.Container>
       <_.NavSet>
@@ -23,30 +31,28 @@ export default function Todo() {
             style={{ cursor: "pointer" }}
           />
         </_.NavDeco>
+
         <_.TitleSet>
           <_.Title>오늘의 할일</_.Title>
-          <_.SubTitle>할 일을 누르면 할 일이 완료됩니다</_.SubTitle>
+          <_.SubTitle>할 일을 누르면 완료됩니다</_.SubTitle>
         </_.TitleSet>
       </_.NavSet>
+
       <_.ResultSet>
         {todo
           .slice()
-          .sort((a, b) => Number(a.done) - Number(b.done))
-          .map((item) => (
+          .sort((a, b) => Number(a.complete) - Number(b.complete))
+          .map(item => (
             <_.ResultItem key={item.id}>
               <_.Clover
-                src={item.done ? IsDone : NotDone}
+                src={item.complete ? IsDone : NotDone}
                 alt="todo"
-                onClick={() =>
-                  setTodo((prev) =>
-                    prev.map((t) =>
-                      t.id === item.id ? { ...t, done: !t.done } : t,
-                    ),
-                  )
-                }
-                done={item.done}
+                onClick={() => toggleTodo(item.id, item.complete)}
+                done={item.complete}
               />
-              <div>{item.value}</div>
+              <div>
+                <_.Title>{item.todos}</_.Title>
+              </div>
             </_.ResultItem>
           ))}
       </_.ResultSet>

@@ -10,15 +10,14 @@ export function useKakaoLogin(): UseMutationResult<AuthResponse, Error, string> 
 
   return useMutation<AuthResponse, Error, string>({
     mutationFn: (code: string) => kakaoLogin(code),
-    onSuccess: async (data) => {
-      setUser(data.user);
+    onSuccess: (data) => {
       localStorage.setItem("token", data.access_token);
       localStorage.setItem("user", JSON.stringify(data.user));
 
-      router.push("/");
+      router.replace("/main");
     },
     onError(err: Error) {
-      console.error("Kakao login error", err);
+      console.error("Kakao login failed:", err.message);
     },
   });
 }

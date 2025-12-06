@@ -1,17 +1,17 @@
 import styled from "@emotion/styled";
 import { color } from "@/styles/theme";
 import Image from "next/image";
-import isPropValid from "@emotion/is-prop-valid"; // props를 필터링
+import isPropValid from "@emotion/is-prop-valid";
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
   max-width: 400px;
-  height: 100vh;
-  padding-top: 12vh;
+  height: 70vh;
+  padding-top: 1vh;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   cursor: default;
 `;
 
