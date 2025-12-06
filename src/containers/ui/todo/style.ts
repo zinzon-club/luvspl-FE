@@ -11,7 +11,7 @@ export const Container = styled.div`
   height: 70vh;
   padding-top: 1vh;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   cursor: default;
 `;
 
