@@ -8,6 +8,7 @@ import NotDone from "@/../public/assets/clover/notDone.svg";
 import Image from "next/image";
 import { getTodos, updateTodoStatus } from "@/services/todo";
 import { TodoItem } from "@/types/todo";
+import Loading from "@/components/Loading";
 
 export default function Todo() {
   const router = useRouter();
@@ -53,7 +54,7 @@ export default function Todo() {
     }
   };
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div><Loading /></div>;
 
   return (
     <_.Container>
@@ -86,7 +87,7 @@ export default function Todo() {
                 done={item.complete}
               />
               <div>
-                <strong>{item.todos}</strong>
+                <_.Title>{item.todos}</_.Title>
               </div>
             </_.ResultItem>
           ))}

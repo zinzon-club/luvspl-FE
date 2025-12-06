@@ -17,6 +17,8 @@ export const getTodos = async () => {
 };
 
 export const updateTodoStatus = async (id: number, complete: boolean) => {
-  const res = await customAxios.patch(`/todo`, { complete });
+  const res = await customAxios.get(`/todos`, {
+    params: { id, complete }
+  });
   return res.data;
 };
