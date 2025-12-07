@@ -53,15 +53,20 @@ const Mypage = () => {
                       width={30}
                       height={30}
                     />
-                    <_.DecoText>챗봇 활성화</_.DecoText>
+                    <_.DecoText>챗봇이랑 대화하기</_.DecoText>
                   </_.DecoSet>
                   <Image
                     src={toggle ? "/assets/toggleBtn/toggleOn.svg" : "/assets/toggleBtn/toggleOff.svg"}
                     alt="toggle"
                     width={36}
                     height={24}
-                    onClick={() => setToggle(!toggle)}
-                    style={{ cursor: 'pointer' }}
+                    onClick={() => {
+                      const newState = !toggle;
+                      setToggle(newState);
+                      if (newState) {
+                        window.open("http://pf.kakao.com/_xnxcJxgn/chat");
+                      }
+                    }}
                   />
                 </_.SubItem>
               )}
