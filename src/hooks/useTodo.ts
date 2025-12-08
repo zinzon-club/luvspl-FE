@@ -57,7 +57,16 @@ export default function useTodos() {
             const cached = localStorage.getItem(key);
 
             if (cached) {
-                const parsed = JSON.parse(cached);
+                let parsed: any = JSON.parse(cached);
+
+                if (!Array.isArray(parsed)) {
+                    if (parsed && Array.isArray(parsed.todos)) {
+                        parsed = parsed.todos;
+                    } else {
+                        parsed = [];
+                    }
+                }
+
                 const idx = parsed.findIndex((t: any) => t.id === id);
 
                 if (idx >= 0) parsed[idx].complete = !current;
