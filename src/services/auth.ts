@@ -18,12 +18,7 @@ export async function kakaoLogin(code: string): Promise<AuthResponse> {
       params: { code },
     });
     return res.data;
-  } catch (e) {
-    try {
-      const res = await customAxios.post<AuthResponse>("/auth/kakao/callback", { code });
-      return res.data;
-    } catch (err) {
-      return handleAxiosError(err);
-    }
+  } catch (err) {
+    return handleAxiosError(err);
   }
 }
